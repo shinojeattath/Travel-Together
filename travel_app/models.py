@@ -17,4 +17,4 @@ class hospital(models.Model):
 class travelling_user(models.Model):
     name = models.CharField(max_length=20)
     place = models.CharField(max_length=30)
-    P = models.CharField(max_length=5)
+    
