@@ -37,3 +37,6 @@ def signup(request):
 
 def homepage(request):
     return render(request, 'home.html')
+
+def places(request):
+    return render(request, 'places.html')
