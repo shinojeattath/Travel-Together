@@ -330,6 +330,10 @@
     text-align: center;
     padding-top: 125px;
   }
+
+  .hero#jammu {
+    background-image: url("../img/kashmir.jpg");
+  }
   
   .hero-title { margin-bottom: 20px; }
   
@@ -380,6 +384,43 @@
     --border-width: 1px;
     font-weight: var(--fw-600);
     margin-top: 35px;
+  }
+
+  
+  .tourist-info {
+    background-color: white;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: -30px;
+  }
+  
+  .rectangle-container {
+    border: 2px solid var(--bright-navy-blue); 
+    border-radius: var(--radius-15); 
+    padding: 20px;
+  }
+  
+  .tourist-table {
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  
+  .tourist-table th,
+  .tourist-table td {
+    border: .5px solid var(--bright-navy-blue); 
+    padding: 10px; 
+  }
+  
+  .tourist-table th {
+    background-color: var(--bright-navy-blue); 
+    color: var(--white);
+  }
+  
+  .tourist-table th:first-child,
+  .tourist-table td:first-child {
+    text-align: left; 
   }
   
   .popular { padding-block: var(--section-padding); }
