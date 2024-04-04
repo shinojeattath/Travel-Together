@@ -36,7 +36,7 @@
           <div class="navbar-top">
 
             <a href="#" class="logo">
-              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
+              <img src="{% static '/images/logo-blue.svg' %}" alt="Tourly logo">
             </a>
 
             <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
@@ -79,9 +79,7 @@
           </p>
 
           <div class="btn-group">
-            <button class="btn btn-primary">Learn more</button>
-
-            <button class="btn btn-secondary">Book now</button>
+            <button class="btn btn-secondary">Learn More</button>
           </div>
 
         </div>
@@ -140,18 +138,18 @@
               <div class="popular-card">
 
                 <figure class="card-img">
-                  <img src="./assets/images/popular-1.jpg" alt="San miguel, italy" loading="lazy">
+                  <img src="{% static '/login/img/jammu.jpg' %}" alt="San miguel, italy" loading="lazy">
                 </figure>
 
                 <div class="card-content">
                   <p class="card-subtitle">
-                    <a href="#">Italy</a>
+                    <a href="#">Jammu & Kashmir</a>
                   </p>
                   <h3 class="h3 card-title">
-                    <a href="#">San miguel</a>
+                    <a href="#">Hajan Valley</a>
                   </h3>
                   <p class="card-text">
-                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                    Situated at a distance of 15 km from Pahalgam in the Anantnag district of Jammu and Kashmir. 
                   </p>
                 </div>
               </div>
@@ -159,17 +157,17 @@
             <li>
               <div class="popular-card">
                 <figure class="card-img">
-                  <img src="./assets/images/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
+                  <img src="{% static '/login/img/munnar.jpg' %}" alt="Burj khalifa, dubai" loading="lazy">
                 </figure>
                 <div class="card-content">
                   <p class="card-subtitle">
-                    <a href="#">Dubai</a>
+                    <a href="#">Idukki</a>
                   </p>
                   <h3 class="h3 card-title">
-                    <a href="#">Burj khalifa</a>
+                    <a href="#">Munnar</a>
                   </h3>
                   <p class="card-text">
-                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                    A town in the Western Ghats mountain range in India’s Kerala state.
                   </p>
                 </div>
               </div>
@@ -177,17 +175,17 @@
             <li>
               <div class="popular-card">
                 <figure class="card-img">
-                  <img src="./assets/images/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
+                  <img src="{% static '/login/img/india-gate.jpg' %}" alt="Kyoto temple, japan" loading="lazy">
                 </figure>
                 <div class="card-content">
                   <p class="card-subtitle">
-                    <a href="#">Japan</a>
+                    <a href="#">New Delhi</a>
                   </p>
                   <h3 class="h3 card-title">
-                    <a href="#">Kyoto temple</a>
+                    <a href="#">India Gate</a>
                   </h3>
                   <p class="card-text">
-                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                    It is a war memorial located near the Kartavya path on the eastern edge of the "ceremonial axis" of New Delhi.
                   </p>
                 </div>
               </div>
@@ -200,11 +198,9 @@
         <div class="container">
           <div class="cta-content">
             <p class="section-subtitle">Call To Action</p>
-            <h2 class="h2 section-title">Ready For Unforgatable Travel. Remember Us!</h2>
+            <h2 class="h2 section-title">Ready For Unforgatable Travel.</h2>
             <p class="section-text">
-              Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
-              laudantium. Sit ornare
-              mollitia tenetur, aptent.
+              Ready for unforgettable travel memories? Don't forget about us! Get in touch today to know more about our website and discover travel partners for your next adventure.
             </p>
           </div>
           <button class="btn btn-secondary">Contact Us !</button>
@@ -218,10 +214,10 @@
     <ion-icon name="chevron-up-outline"></ion-icon>
   </a>
 
-  <script src="./assets/js/script.js"></script>
+  <script src="{% static '/login/js/script.js' %}"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
