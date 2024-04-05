@@ -45,6 +45,21 @@ def jammu(request):
     return render(request, 'jammu.html',{'travellers':travellers,'places':places})
 
 def booking(request):
+
+    
+    if request.method =='POST':
+        
+        Travelling_user = travelling_user(
+            name=request.POST['name'],
+            place=request.POST['place_of_visit'],
+            sub_places=request.POST['station'],
+            phone=request.POST['contact'],
+            date_from=request.POST['date_from'],
+            date_to=request.POST['date_to'],
+            no_of_travellers=request.POST['num_travelers']
+        )
+        Travelling_user.save()
+        
     return render(request, 'book.html')
 
 def idukki(request):
