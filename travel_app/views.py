@@ -44,3 +44,11 @@ def jammu(request):
     places = sub_places.objects.filter(main_place = 'jammu')
     return render(request, 'jammu.html',{'travellers':travellers,'places':places})
 
+def booking(request):
+    return render(request, 'book.html')
+
+def idukki(request):
+    return render(request, 'idukki.html')
+
+def Delhi(request):
+    return render(request, 'Delhi.html')

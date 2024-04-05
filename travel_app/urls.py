@@ -7,4 +7,6 @@ urlpatterns = [
     path('signup',views.signup, name = 'signup'),
     path('jammu',views.jammu, name = 'jammu'),
     path('booking', views.booking,name = 'booking'), 
+    path('idukki',views.idukki, name = 'idukki'),
+    path('Delhi',views.Delhi, name = 'Delhi'),
 ]
