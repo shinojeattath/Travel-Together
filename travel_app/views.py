@@ -40,5 +40,7 @@ def homepage(request):
     return render(request, 'home.html')
 
 def jammu(request):
+    travellers = travelling_user.objects.filter(place="jammu")
+    places = sub_places.objects.filter(main_place = 'jammu')
+    return render(request, 'jammu.html',{'travellers':travellers,'places':places})
 
-    return render(request, 'places.html')

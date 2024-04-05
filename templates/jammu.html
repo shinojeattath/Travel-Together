@@ -86,48 +86,15 @@
                 </tr>
               </thead>
               <tbody>
+              {% for i in places %}
                 <tr>
-                  <td>Paris</td>
+                  <td>{{i.name}}</td>
                   <td>2</td>
                   <td>2024-05-15</td>
                   <td>2024-05-20</td>
                   <td>French</td>
                 </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
+              {% endfor %}  
               </tbody>
             </table>
           </div>
