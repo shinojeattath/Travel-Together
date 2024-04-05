@@ -45,6 +45,7 @@ def jammu(request):
     return render(request, 'jammu.html',{'travellers':travellers,'places':places})
 
 def booking(request):
+
     
     if request.method =='POST':
         
@@ -60,3 +61,9 @@ def booking(request):
         Travelling_user.save()
         
     return render(request, 'book.html')
+
+def idukki(request):
+    return render(request, 'idukki.html')
+
+def Delhi(request):
+    return render(request, 'Delhi.html')

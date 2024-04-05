@@ -1,0 +1,221 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idukki</title>
+  <link rel="stylesheet" href="{% static 'login/css/home.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+<body id="top">
+  <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+  </header>
+  <main>
+    <article>
+      <section class="hero" id="idukki">
+        <div class="container">
+
+          <h2 class="h1 hero-title">Idukki</h2>
+
+          <p class="hero-text">
+            Idukki district is a densely forested, mountainous region in the south Indian state of Kerala. In the north, Anamudi mountain towers over Eravikulam National Park, where the rare, blue Neelakurinji flower blooms every 12 years.
+          </p>
+
+          <div class="btn-group">
+            <a href="book.html" class="btn btn-secondary">Book Now</a>
+          </div>
+
+        </div>
+      </section>
+      
+
+      <section class="tourist-info">
+        <div class="container">
+          <div class="rectangle-container">
+            <h2 class="section-title">Other Tourists Booked for the Same Package</h2>
+            <table class="tourist-table">
+              <thead>
+                <tr>
+                  <th>Destination</th>
+                  <th>Number of Members</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Nationality</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Paris</td>
+                  <td>2</td>
+                  <td>2024-05-15</td>
+                  <td>2024-05-20</td>
+                  <td>French</td>
+                </tr>
+                <tr>
+                  <td>Paris</td>
+                  <td>2</td>
+                  <td>2024-05-15</td>
+                  <td>2024-05-20</td>
+                  <td>French</td>
+                </tr>
+                <tr>
+                  <td>Paris</td>
+                  <td>2</td>
+                  <td>2024-05-15</td>
+                  <td>2024-05-20</td>
+                  <td>French</td>
+                </tr>
+                <tr>
+                  <td>Paris</td>
+                  <td>2</td>
+                  <td>2024-05-15</td>
+                  <td>2024-05-20</td>
+                  <td>French</td>
+                </tr>
+                <tr>
+                  <td>Paris</td>
+                  <td>2</td>
+                  <td>2024-05-15</td>
+                  <td>2024-05-20</td>
+                  <td>French</td>
+                </tr>
+                <tr>
+                  <td>Paris</td>
+                  <td>2</td>
+                  <td>2024-05-15</td>
+                  <td>2024-05-20</td>
+                  <td>French</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular" id="destination">
+        <div class="container">
+
+          <p class="section-subtitle">Idukki</p>
+
+          <h2 class="h2 section-title">Must Visit</h2>
+
+          <p class="section-text">
+            Explore the tranquil beauty and cultural richness of Idukki, Kerala. From the serene backwaters to the mist-covered hills of Munnar, immerse yourself in breathtaking landscapes and timeless traditions. Experience the warm hospitality, delectable cuisine, and adventurous escapades in this southern haven. Discover the hidden gems and natural wonders of Idukki, where every moment is an enchanting journey.
+          </p>
+
+          <ul class="popular-list">
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="{% static '/login/img/dal.jpg' %}" alt="San miguel, italy" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Hill View Park</a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="{% static '/login/img/Doodhpathri.jpg' %}" alt="Burj khalifa, dubai" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Idukki Arch Dam</a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="{% static '/login/img/Tulip-Garden.jpg' %}" alt="Kyoto temple, japan" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Tulip Garden</a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="popular-list">
+            <li>
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="{% static '/login/img/Gulmarg.jpg' %}" alt="San miguel, italy" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Gulmarg</a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="{% static '/login/img/srinagar.jpg' %}" alt="Burj khalifa, dubai" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Srinagar</a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="{% static '/login/img/Hajan.jpg' %}" alt="Kyoto temple, japan" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">
+                    <a href="#">Wadiy e Hajan</a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="cta" id="contact">
+        <div class="container">
+          <div class="cta-content">
+            <p class="section-subtitle">Call To Action</p>
+            <h2 class="h2 section-title">Ready For Unforgatable Travel.</h2>
+            <p class="section-text">
+              Ready for unforgettable travel memories? Don't forget about us! Get in touch today to know more about our website and discover travel partners for your next adventure.
+            </p>
+          </div>
+          <button class="btn btn-secondary">Contact Us !</button>
+        </div>
+      </section>
+    </article>
+  </main>
+  
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <script src="{% static '/login/js/script.js' %}"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
