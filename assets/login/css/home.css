@@ -338,6 +338,11 @@
   .hero#idukki {
     background-image: url("../img/idukki.jpg");
   }
+
+  .hero#delhi {
+    background-image: url("../img/delhi.jpg");
+  }
+  
   .hero-title { margin-bottom: 20px; }
   
   .hero-text {
