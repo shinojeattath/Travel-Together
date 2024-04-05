@@ -1,0 +1,52 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="{% static 'login/css/styles.css' %}">
+</head>
+<body>
+
+<div class="login">
+    <img src="{% static 'login/img/login-bg.jpg' %}" alt="image" class="login__bg">
+    <form action="submit.php" method="post" class="login__form">
+        <h2 class="login__title">Travel Form</h2>
+
+        <div class="login__inputs">
+            <div class="login__box">
+                <input type="text" id="name" name="name" class="login__input" placeholder="Name" required>
+            </div>
+
+            <div class="login__box">
+                <input type="text" id="place_of_visit" name="place_of_visit" class="login__input" placeholder="Place of Visit" required>
+            </div>
+
+            <div class="login__box">
+                <input type="text" id="station" name="station" class="login__input" placeholder="Station" required>
+            </div>
+
+            <div class="login__box">
+                <input type="tel" id="contact" name="contact" class="login__input" placeholder="Contact" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="login__box">
+                <input type="date" id="date_from" name="date_from" class="login__input" placeholder="Date - From" required>
+            </div>
+
+            <div class="login__box">
+                <input type="date" id="date_to" name="date_to" class="login__input" placeholder="Date - To" required>
+            </div>
+
+            <div class="login__box">
+                <input type="number" id="num_travelers" name="num_travelers" class="login__input" placeholder="Number of Travelers" min="1" required>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" class="login__button">
+    </form>
+</div>
+
+</body>
+</html>

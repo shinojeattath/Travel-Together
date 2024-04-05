@@ -41,3 +41,6 @@ def homepage(request):
 
 def jammu(request):
     return render(request, 'jammu.html')
+
+def booking(request):
+    return render(request, 'book.html')
