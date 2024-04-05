@@ -16,19 +16,6 @@
 <body id="top">
   <header class="header" data-header>
     <div class="overlay" data-overlay></div>
-    <div class="header-top">
-      <div class="container">
-        <a href="tel:+01123456790" class="helpline-box"></a>
-        <a href="#" class="logo">
-          <h2 class="Main-Logo">TravelTogether</h2>
-        </a>
-        <div class="header-btn-group">
-          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
-            <ion-icon name="menu-outline"></ion-icon>
-          </button>
-        </div>
-      </div>
-    </div>
   </header>
   <main>
     <article>
@@ -41,35 +28,13 @@
             Picturesque and enchanting, Kashmir is cradled high in the lofty green Himalayas and hailed all over the world for its incredible natural beauty. Surrounded by mountain peaks, lush green valleys, glistening lakes, temples and spectacular Mughal-era gardens, it has inspired poets through centuries.
           </p>
 
-        </div>
-      </section>
-      <section class="tour-search" id="find-match">
-        <div class="container">
-
-          <form action="" class="tour-search-form">
-
-            <div class="input-wrapper">
-              
-            </div>
-
-            <div class="input-wrapper">
-              <label for="checkin" class="input-label">Trip Start</label>
-
-              <input type="date" name="checkin" id="checkin" required class="input-field">
-            </div>
-
-            <div class="input-wrapper">
-              <label for="checkout" class="input-label">Trip End</label>
-
-              <input type="date" name="checkout" id="checkout" required class="input-field">
-            </div>
-
-            <button type="submit" class="btn btn-secondary">Check now</button>
-
-          </form>
+          <div class="btn-group">
+            <button class="btn btn-secondary">Book Now</button>
+          </div>
 
         </div>
       </section>
+      
 
       <section class="tourist-info">
         <div class="container">
@@ -151,114 +116,75 @@
               <div class="popular-card">
 
                 <figure class="card-img">
-                  <img src="{% static '/login/img/jammu.jpg' %}" alt="San miguel, italy" loading="lazy">
+                  <img src="{% static '/login/img/dal.jpg' %}" alt="San miguel, italy" loading="lazy">
                 </figure>
 
                 <div class="card-content">
-                  <p class="card-subtitle">
-                    <a href="#">Hajan Valley</a>
-                  </p>
                   <h3 class="h3 card-title">
-                    <a href="#">Jammu & Kashmir</a>
+                    <a href="#">Dal Lake</a>
                   </h3>
-                  <p class="card-text">
-                    Situated at a distance of 15 km from Pahalgam in the Anantnag district of Jammu and Kashmir. 
-                  </p>
                 </div>
               </div>
             </li>
             <li>
               <div class="popular-card">
                 <figure class="card-img">
-                  <img src="{% static '/login/img/munnar.jpg' %}" alt="Burj khalifa, dubai" loading="lazy">
+                  <img src="{% static '/login/img/Doodhpathri.jpg' %}" alt="Burj khalifa, dubai" loading="lazy">
                 </figure>
                 <div class="card-content">
-                  <p class="card-subtitle">
-                    <a href="#">Munnar</a>
-                  </p>
                   <h3 class="h3 card-title">
-                    <a href="#">Idukki</a>
+                    <a href="#">Doodhpathri</a>
                   </h3>
-                  <p class="card-text">
-                    A town in the Western Ghats mountain range in India’s Kerala state.
-                  </p>
                 </div>
               </div>
             </li>
             <li>
               <div class="popular-card">
                 <figure class="card-img">
-                  <img src="{% static '/login/img/india-gate.jpg' %}" alt="Kyoto temple, japan" loading="lazy">
+                  <img src="{% static '/login/img/Tulip-Garden.jpg' %}" alt="Kyoto temple, japan" loading="lazy">
                 </figure>
                 <div class="card-content">
-                  <p class="card-subtitle">
-                    <a href="#">India Gate</a>
-                  </p>
                   <h3 class="h3 card-title">
-                    <a href="#">New Delhi</a>
+                    <a href="#">Tulip Garden</a>
                   </h3>
-                  <p class="card-text">
-                    It is a war memorial located near the Kartavya path on the eastern edge of the "ceremonial axis" of New Delhi.
-                  </p>
                 </div>
               </div>
             </li>
           </ul>
           <ul class="popular-list">
-
             <li>
               <div class="popular-card">
-
                 <figure class="card-img">
-                  <img src="{% static '/login/img/jammu.jpg' %}" alt="San miguel, italy" loading="lazy">
+                  <img src="{% static '/login/img/Gulmarg.jpg' %}" alt="San miguel, italy" loading="lazy">
                 </figure>
-
                 <div class="card-content">
-                  <p class="card-subtitle">
-                    <a href="#">Hajan Valley</a>
-                  </p>
                   <h3 class="h3 card-title">
-                    <a href="#">Jammu & Kashmir</a>
+                    <a href="#">Gulmarg</a>
                   </h3>
-                  <p class="card-text">
-                    Situated at a distance of 15 km from Pahalgam in the Anantnag district of Jammu and Kashmir. 
-                  </p>
                 </div>
               </div>
             </li>
             <li>
               <div class="popular-card">
                 <figure class="card-img">
-                  <img src="{% static '/login/img/munnar.jpg' %}" alt="Burj khalifa, dubai" loading="lazy">
+                  <img src="{% static '/login/img/srinagar.jpg' %}" alt="Burj khalifa, dubai" loading="lazy">
                 </figure>
                 <div class="card-content">
-                  <p class="card-subtitle">
-                    <a href="#">Munnar</a>
-                  </p>
                   <h3 class="h3 card-title">
-                    <a href="#">Idukki</a>
+                    <a href="#">Srinagar</a>
                   </h3>
-                  <p class="card-text">
-                    A town in the Western Ghats mountain range in India’s Kerala state.
-                  </p>
                 </div>
               </div>
             </li>
             <li>
               <div class="popular-card">
                 <figure class="card-img">
-                  <img src="{% static '/login/img/india-gate.jpg' %}" alt="Kyoto temple, japan" loading="lazy">
+                  <img src="{% static '/login/img/Hajan.jpg' %}" alt="Kyoto temple, japan" loading="lazy">
                 </figure>
                 <div class="card-content">
-                  <p class="card-subtitle">
-                    <a href="#">India Gate</a>
-                  </p>
                   <h3 class="h3 card-title">
-                    <a href="#">New Delhi</a>
+                    <a href="#">Wadiy e Hajan</a>
                   </h3>
-                  <p class="card-text">
-                    It is a war memorial located near the Kartavya path on the eastern edge of the "ceremonial axis" of New Delhi.
-                  </p>
                 </div>
               </div>
             </li>
