@@ -68,9 +68,12 @@ img {
   display: grid;
 }
 
-.login__inputs {
-  row-gap: 1.25rem;
-  margin-bottom: 1rem;
+.login__input {
+  width: 100%;
+  background: none;
+  color: var(--white-color);
+  padding: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .login__box {
@@ -80,6 +83,7 @@ img {
   border: 2px solid hsla(0, 0%, 100%, .7);
   padding-inline: 1.25rem;
   border-radius: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 .login__input, 
