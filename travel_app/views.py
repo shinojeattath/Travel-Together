@@ -40,5 +40,4 @@ def homepage(request):
     return render(request, 'home.html')
 
 def jammu(request):
-
-    return render(request, 'places.html')
+    return render(request, 'jammu.html')
