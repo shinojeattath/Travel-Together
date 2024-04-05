@@ -51,11 +51,10 @@ img {
   position: relative;
   margin-inline: 1.5rem;
   background-color: hsla(0, 0%, 100%, .01);
-  border: 2px solid hsla(0, 0%, 100%, .7);
   padding: 2.5rem 1rem;
   color: var(--white-color);
   border-radius: 1rem;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(10px);
 }
 
 .login__title {
