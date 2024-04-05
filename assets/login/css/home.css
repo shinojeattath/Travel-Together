@@ -335,6 +335,9 @@
     background-image: url("../img/kashmir.jpg");
   }
   
+  .hero#idukki {
+    background-image: url("../img/idukki.jpg");
+  }
   .hero-title { margin-bottom: 20px; }
   
   .hero-text {
