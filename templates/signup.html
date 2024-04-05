@@ -1,12 +1,79 @@
-{% load static from static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{% static 'Uec Logo 2.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'login/css/styles.css' %}">
-    <title>SignIn</title>
+    <title>Sign Up</title>
+    <style>
+        body {
+            background-color: #222; /* Dark background color */
+            color: #fff; /* Text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            /* Define your header styles here */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+            color: #fff;
+            outline: none;
+            transition: background-color 0.3s;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        button[type="submit"]:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter background on focus/hover */
+        }
+
+        button[type="submit"] {
+            background-color: #ff5f6d; /* Button background color */
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .error {
+            color: #ff5f6d; /* Error message color */
+        }
+    </style>
 </head>
 <body id="signup-body">
     <header>
@@ -21,7 +88,6 @@
 
             <label for="email">Email:</label>
             <input type="email" id="signup-input" name="email" required>
-
 
             <label for="password">Password:</label>
             <input type="password" id="signup-pass" name="password" required>

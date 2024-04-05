@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from .models import *
 
 # Create your views here.
 def user_login(request):
@@ -38,5 +39,6 @@ def signup(request):
 def homepage(request):
     return render(request, 'home.html')
 
-def places(request):
+def jammu(request):
+
     return render(request, 'places.html')
