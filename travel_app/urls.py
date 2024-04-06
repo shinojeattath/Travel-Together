@@ -10,4 +10,5 @@ urlpatterns = [
     path('idukki',views.idukki, name = 'idukki'),
     path('Delhi',views.Delhi, name = 'Delhi'),
     path('profile',views.profile, name = 'profile'),
+    path('cancel',views.cancelFunc,name='cancelFunc'),
 ]

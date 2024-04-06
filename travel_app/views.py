@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.http import HttpResponse
@@ -63,10 +63,25 @@ def booking(request):
     return render(request, 'book.html')
 
 def idukki(request):
-    return render(request, 'idukki.html')
+    travellers = travelling_user.objects.filter(place="idukki")
+    places = sub_places.objects.filter(main_place = 'idukki')
+
+    return render(request, 'idukki.html',{'travellers':travellers, 'places':places})
 
 def Delhi(request):
-    return render(request, 'Delhi.html')
+    travellers = travelling_user.objects.filter(place="delhi")
+    places = sub_places.objects.filter(main_place = 'delhi')
+
+    return render(request, 'Delhi.html',{'travellers':travellers,'places':places})
 
 def profile(request):
-    return render(request, 'profile.html')
+    username = request.session.get('username')
+    booked = travelling_user.objects.filter(name=username)
+
+    return render(request, 'profile.html', {'booked':booked})
+
+def cancelFunc(request):
+    username = request.session.get('username')
+    booked = get_object_or_404(travelling_user, name = username)
+    booked.delete()
+    return redirect('profile')
