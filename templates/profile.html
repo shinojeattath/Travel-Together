@@ -10,8 +10,14 @@
 </head>
 <body>
     <div class="login">
-        <img src="{% static 'login/img/login-bg.jpg' %}" alt="image" class="login__bg">
-        <form action="" class="login__form" id="table" method="post">
+        <img src="{% static 'login/img/travel.jpg' %}" alt="image" class="login__bg">
+        <form action="" class="login__form" id="profile" method="post">
+            <a href="{% url 'homepage' %}" class="home-link"><i class="ri-home-2-line"></i></a>
+            <div class="profile-section">
+                <img src="{% static 'login/img/login-bg.jpg' %}" alt="Profile Photo" class="profile-photo">
+                <h2 class="profile-name">John Doe</h2>
+                <p class="profile-status">Online</p>
+            </div>
             <h1 class="login__title">Booked Trips</h1>
             <div class="login__table-container">
             {% if booked %}
@@ -36,7 +42,7 @@
                     </tbody>
                 </table>
             {% else %} 
-            No Bookings 
+            <div class="no-bookings">No Bookings</div>
             {% endif %}
             </div>
         </form>

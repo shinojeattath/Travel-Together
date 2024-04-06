@@ -51,7 +51,7 @@ img {
 .login__form {
   position: relative;
   margin-inline: 1.5rem;
-  background-color: hsla(0, 0%, 100%, .01);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2.5rem 1rem;
   color: var(--white-color);
   border-radius: 1rem;
@@ -59,7 +59,12 @@ img {
 }
 
 .login__form#table {
-  width: auto;
+  width: 500px;
+  padding-top: -20px;
+}
+
+.login__form#profile {
+  width: 500px;
 }
 
 .login__title {
@@ -80,6 +85,18 @@ img {
   padding: 0.75rem;
   font-size: 0.875rem;
 }
+.home-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: #ccc;
+}
 
 .login__box {
   grid-template-columns: 1fr max-content;
@@ -95,6 +112,11 @@ img {
 .login__button {
   border: none;
   outline: none;
+}
+
+.no-bookings {
+  text-align: center;
+  color: #fff;
 }
 
 .login__input {
@@ -169,6 +191,32 @@ img {
 
 .login__table-container {
   overflow-x: auto;
+}
+
+/* CSS styles */
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto; /* Align the photo to the center horizontally */
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.profile-status {
+  color: green;
 }
 
 .login__table {
