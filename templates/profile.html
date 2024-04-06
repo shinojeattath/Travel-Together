@@ -1,0 +1,39 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="{% static 'login/css/styles.css' %}">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="login">
+        <img src="{% static 'login/img/login-bg.jpg' %}" alt="image" class="login__bg">
+        <form action="" class="login__form" id="table" method="post">
+            <h1 class="login__title">Booked Trips</h1>
+            <div class="login__table-container">
+                <table class="login__table">
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Cancel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" placeholder="Place" name="place" required class="login__input"></td>
+                            <td><input type="date" name="start_date" required class="login__input"></td>
+                            <td><input type="date" name="end_date" required class="login__input"></td>
+                            <td><button type="button" class="login__button">Cancel</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
