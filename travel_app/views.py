@@ -67,3 +67,6 @@ def idukki(request):
 
 def Delhi(request):
     return render(request, 'Delhi.html')
+
+def profile(request):
+    return render(request, 'profile.html')
