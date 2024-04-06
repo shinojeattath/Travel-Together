@@ -47,52 +47,19 @@
                   <th>Number of Members</th>
                   <th>Start Date</th>
                   <th>End Date</th>
-                  <th>Nationality</th>
+                  <th>Number</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
-                <tr>
-                  <td>Paris</td>
-                  <td>2</td>
-                  <td>2024-05-15</td>
-                  <td>2024-05-20</td>
-                  <td>French</td>
-                </tr>
+              {% for i in travellers %}
+          <tr>
+            <td>{{ i.sub_places }}</td>
+            <td>{{i.no_of_travellers}}</td>
+            <td>{{i.date_from}}</td>
+            <td>{{i.date_to}}</td>
+            <td>{{i.phone}}</td>
+        </tr>
+              {% endfor %}  
               </tbody>
             </table>
           </div>
