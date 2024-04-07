@@ -78,7 +78,7 @@ def profile(request):
     username = request.session.get('username')
     booked = travelling_user.objects.filter(name=username)
 
-    return render(request, 'profile.html', {'booked':booked})
+    return render(request, 'profile.html', {'booked':booked, 'username':username})
 
 def cancelFunc(request):
     username = request.session.get('username')

@@ -15,7 +15,7 @@
             <a href="{% url 'homepage' %}" class="home-link"><i class="ri-home-2-line"></i></a>
             <div class="profile-section">
                 <img src="{% static 'login/img/login-bg.jpg' %}" alt="Profile Photo" class="profile-photo">
-                <h2 class="profile-name">John Doe</h2>
+                <h2 class="profile-name">{{username}}</h2>
                 <p class="profile-status">Online</p>
             </div>
             <h1 class="login__title">Booked Trips</h1>
