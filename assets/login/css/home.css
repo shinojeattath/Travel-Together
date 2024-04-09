@@ -360,9 +360,11 @@
   }
   
   .tour-search {
-    background: var(--bright-navy-blue);
+    background-color: rgb(63, 63, 63);
+    background-size: cover;
+    background-position: center;
     padding-block: var(--section-padding);
-  }
+}
   
   .tour-search-form .input-label {
     color: var(--white);
@@ -491,7 +493,11 @@
   .popular .btn { margin-inline: auto; }
   
   .cta {
-    background: var(--bright-navy-blue);
+    background-image: url("../img/brown.jpg");
+    background-color: hsla(0, 0%, 0%, 0.398);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
     padding-block: var(--section-padding);
   }
   
