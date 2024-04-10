@@ -5,7 +5,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("travel_app", "0007_alter_profile_photo_photo"),
+        ("travel_app", "0006_alter_profile_photo_photo"),
     ]
 
     operations = [

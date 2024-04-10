@@ -201,13 +201,20 @@
       <div class="review-section">
         <h2>Customer Reviews</h2>
         <div class="reviews-container">
+                {% for i in Reviews %}
+
             <div class="review">
                 <div class="reviewer">
-                    <img src="{% static '/login/img/india-gate.jpg' %}" alt="User Avatar">
-                    <h3>John Doe</h3>
+                {% for image in image %}
+                    {% if image.name == review.name %}
+                    <img src="{{image.photo.url}}" alt="User Avatar">
+                    {% endif %}
+                {% endfor %}
+                    <h3>{{i.name}}</h3>
                 </div>
-                <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet est sed urna fermentum tristique."</p>
+                <p class="review-text">"{{i.review}}"</p>
             </div>
+            {% endfor %}
             <div class="review">
                 <div class="reviewer">
                     <img src="{% static '/login/img/india-gate.jpg' %}" alt="User Avatar">

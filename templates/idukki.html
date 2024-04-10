@@ -160,8 +160,10 @@
       </section>
       <div class="review-section">
         <h2>Customer Reviews</h2>
-        {% for  review in reviews %}
+        {% if reviews %}
         <div class="reviews-container">
+                {% for  review in reviews %}
+
             <div class="review">
                 <div class="reviewer">
                 {% for image in image %}
@@ -173,8 +175,12 @@
                 </div>
                 <p class="review-text">"{{review.review}}"</p>
             </div>   
+            {% endfor %}
         </div>
-        {% endfor %}
+        
+        {% else %}
+        <p class="review-text">No Reviews</p>
+        {% endif %}
     </div>
       <section class="cta" id="contact">
         <div class="container">
