@@ -13,6 +13,7 @@ urlpatterns = [
     path('Delhi',views.Delhi, name = 'Delhi'),
     path('profile',views.profile, name = 'profile'),
     path('cancel',views.cancelFunc,name='cancelFunc'),
+    path('reviewpage',views.reviewpage,name='reviewpage'),
 ]
 
 if settings.DEBUG:

@@ -102,3 +102,6 @@ def cancelFunc(request):
     booked = get_object_or_404(travelling_user, name = username)
     booked.delete()
     return redirect('profile')
+
+def reviewpage(request):
+    return render(request, 'reviewpage.html')
