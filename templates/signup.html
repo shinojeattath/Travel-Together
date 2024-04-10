@@ -50,18 +50,18 @@
             margin-bottom: 15px;
             border: none;
             border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+            background-color: rgba(255, 255, 255, 0.2); 
             color: #fff;
             outline: none;
             transition: background-color 0.3s;
-            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            box-sizing: border-box; 
         }
 
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="password"]:focus,
         button[type="submit"]:hover {
-            background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter background on focus/hover */
+            background-color: rgba(255, 255, 255, 0.3); 
         }
 
         button[type="submit"] {
@@ -71,8 +71,46 @@
         }
 
         .error {
-            color: #ff5f6d; /* Error message color */
+            color: #ff5f6d; 
         }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2); 
+            color: #fff;
+            outline: none;
+            transition: background-color 0.3s;
+            box-sizing: border-box;
+        }
+        
+        input[type="file"]:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        label[for='image'] {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="file"]::file-selector-button {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #ff5f6d; /* Button background color */
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        /* Hide the default file input button */
+        input[type="file"]::-webkit-file-upload-button {
+            display: none;
+        }
+        
     </style>
 </head>
 <body id="signup-body">
