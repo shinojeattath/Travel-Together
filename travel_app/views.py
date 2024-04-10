@@ -28,10 +28,13 @@ def signup(request):
         name = request.POST['name']
         email = request.POST['email']
         password = request.POST['password']
+        image = request.FILES['image']
       
         
         user = User.objects.create_user(name ,email, password)
         user.save()
+        image = profile_photo(name=name, photo=image)
+        image.save()
 
         return redirect('user_login')  
     return render(request, 'signup.html')
@@ -59,6 +62,7 @@ def booking(request):
             no_of_travellers=request.POST['num_travelers']
         )
         Travelling_user.save()
+        return redirect(profile)
         
     return render(request, 'book.html')
 
@@ -77,8 +81,11 @@ def Delhi(request):
 def profile(request):
     username = request.session.get('username')
     booked = travelling_user.objects.filter(name=username)
-
-    return render(request, 'profile.html', {'booked':booked, 'username':username})
+    try:
+        image = profile_photo.objects.get(name=username)
+    except profile_photo.DoesNotExist:
+        image = None
+    return render(request, 'profile.html', {'booked':booked, 'username':username, 'image':image})
 
 def cancelFunc(request):
     username = request.session.get('username')
