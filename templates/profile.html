@@ -14,7 +14,7 @@
         <form action="" class="login__form" id="profile" method="post">
             <a href="{% url 'homepage' %}" class="home-link"><i class="ri-home-2-line"></i></a>
             <div class="profile-section">
-                <img src="{{ image.photo }}" alt="Profile Photo" class="profile-photo">
+                <img src="{{ image.photo.url }}" alt="Profile Photo" class="profile-photo">
                 <h2 class="profile-name">{{username}}</h2>
                 <p class="profile-status">Online</p>
             </div>
