@@ -43,9 +43,13 @@ def homepage(request):
     return render(request, 'home.html')
 
 def jammu(request):
+    username = request.session.get('username')
     travellers = travelling_user.objects.filter(place="jammu")
     places = sub_places.objects.filter(main_place = 'jammu')
-    return render(request, 'jammu.html',{'travellers':travellers,'places':places})
+    image = get_object_or_404(profile_photo, name = username)
+    reviews = review.objects.filter(place = 'delhi')
+
+    return render(request, 'jammu.html',{'travellers':travellers,'places':places, 'image':image, 'reviews':reviews})
 
 def booking(request):
 
@@ -67,16 +71,22 @@ def booking(request):
     return render(request, 'book.html')
 
 def idukki(request):
+    username = request.session.get('username')
     travellers = travelling_user.objects.filter(place="idukki")
     places = sub_places.objects.filter(main_place = 'idukki')
+    image = get_object_or_404(profile_photo, name = username)
+    reviews = review.objects.filter(place = 'idukki')
 
-    return render(request, 'idukki.html',{'travellers':travellers, 'places':places})
+    return render(request, 'idukki.html',{'travellers':travellers, 'places':places, 'image':image, 'reviews':reviews})
 
 def Delhi(request):
+    username = request.session.get('username')
     travellers = travelling_user.objects.filter(place="delhi")
     places = sub_places.objects.filter(main_place = 'delhi')
+    image = profile_photo.objects.all()
+    reviews = review.objects.filter(place = 'delhi')
 
-    return render(request, 'Delhi.html',{'travellers':travellers,'places':places})
+    return render(request, 'Delhi.html',{'travellers':travellers,'places':places, 'image':image, 'reviews':reviews})
 
 def profile(request):
     username = request.session.get('username')
