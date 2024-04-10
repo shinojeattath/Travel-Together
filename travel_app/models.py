@@ -27,3 +27,7 @@ class travelling_user(models.Model):
 class sub_places(models.Model):
     main_place = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
+
+class profile_photo(models.Model):
+    name = models.CharField(max_length=30)
+    photo = models.ImageField(upload_to='media/')

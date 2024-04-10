@@ -80,7 +80,7 @@
     </header>
     <div class="container" id="signup-container">
         <h1>Sign Up</h1>
-        <form action="#" method="post" onsubmit="return validatePasswords()">
+        <form action="#" method="post" enctype="multipart/form-data" onsubmit="return validatePasswords()">
             {% csrf_token %}
 
             <label for="name">Name:</label>
@@ -94,6 +94,9 @@
 
             <label for="retypePassword">Retype Password:</label>
             <input type="password" id="signup-repass" name="retypePassword" required oninput="validatePasswords()">
+
+            <label for='image'>Profile Picture:</label>
+            <input type="file" accept=".jpg, .jpeg, .png" name="image" required>
 
             <button type="submit" id="signup-button2">REGISTER</button>
         </form>
