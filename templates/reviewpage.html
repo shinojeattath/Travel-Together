@@ -1,0 +1,41 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="{% static 'login/css/styles.css' %}">
+
+    <title>Submit Review</title>
+</head>
+<body>
+    <div class="review">
+        
+    
+        <div class="user-details">
+            <img src="{% static 'login/img/lotus.jpg' %}" alt="Profile Picture" class="profile-pic">
+            <span class="username">John Doe</span>
+        </div>
+
+        <div class="place-visited">
+            <h2>Place Visited: </h2>
+            <p>Paris, France</p>
+        </div>
+
+        <form action="#" class="review-form" method="post">
+            {% csrf_token %}
+            <h1 class="review__title">Submit Review</h1>
+
+            <div class="review__inputs">
+                <div class="review__box">
+                    <textarea placeholder="Write your review here..." name="review" required class="review__input"></textarea>
+                    <i class="ri-pencil-fill"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="review__button">Submit Review</button>
+        </form>
+    </div>
+</body>
+</html>
