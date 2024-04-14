@@ -110,3 +110,6 @@ def reviewpage(request):
 
 def remainder(request):
     return render(request, 'remainder.html')
+
+def newremainder(request):
+    return render(request, 'newrem.html')

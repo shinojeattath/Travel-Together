@@ -108,6 +108,30 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.btn {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: var(--fs-5);
+  border-radius: 100px;
+  padding: var(--padding, 8px 18px);
+  border: var(--border-width, 2px) solid transparent;
+  transition: var(--transition);
+}
+
+.no-bookings{
+  padding-bottom: 40px;
+}
+
+.btn-primary {
+  background: var(--bright-navy-blue);
+  border-color: var(--bright-navy-blue);
+}
+
+.btn-primary:is(:hover, :focus) {
+  background: var(--yale-blue);
+  border-color: var(--yale-blue);
+}
+
 .login__input, 
 .login__button {
   border: none;
@@ -191,6 +215,10 @@ img {
 
 .login__table-container {
   overflow-x: auto;
+}
+
+.login__table{
+  align-items: center;
 }
 
 .emergency-container {

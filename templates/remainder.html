@@ -14,14 +14,14 @@
         <form action="" class="login__form" id="profile" method="post">
             <a href="{% url 'homepage' %}" class="home-link"><i class="ri-home-2-line"></i></a>
             <div class="reminder-container">
-                <h1 class="login__title">Upcoming Trips</h1>
+                <h1 class="login__title">Medical Reminders</h1>
                 <div class="login__table-container">
                     {% if upcoming %}
                         <table class="login__table">
                             <thead>
                                 <tr>
-                                    <th>Place</th>
-                                    <th>Days Left</th>
+                                    <th>Reminder</th>
+                                    <th>Due Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,11 +34,14 @@
                             </tbody>
                         </table>
                     {% else %}
-                        <div class="no-bookings">No Upcoming Trips</div>
+                        <div class="no-bookings">No Reminders</div>
                     {% endif %}
                 </div>
+                <a href="{% url 'newremainder' %}" class="btn btn-primary">Add Reminder</a>
             </div>
+
         </form>
+
     </div>
 </body>
 </html>
