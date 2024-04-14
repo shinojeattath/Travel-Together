@@ -14,6 +14,8 @@ urlpatterns = [
     path('profile',views.profile, name = 'profile'),
     path('cancel',views.cancelFunc,name='cancelFunc'),
     path('reviewpage',views.reviewpage,name='reviewpage'),
+    path('remainder',views.remainder,name='remainder'),
+    path('newremainder',views.newremainder,name='newremainder'),
 ]
 
 if settings.DEBUG:

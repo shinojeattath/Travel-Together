@@ -162,8 +162,10 @@
       </section>
       <div class="review-section">
         <h2>Customer Reviews</h2>
-        {% for  review in reviews %}
+        {% if reviews %}
         <div class="reviews-container">
+                {% for  review in reviews %}
+
             <div class="review">
                 <div class="reviewer">
                 {% for image in image %}
@@ -175,17 +177,24 @@
                 </div>
                 <p class="review-text">"{{review.review}}"</p>
             </div>   
+            {% endfor %}
         </div>
-        {% endfor %}
+        
+        {% else %}
+        <p class="review-text">No Reviews</p>
+        <a href="{% url 'reviewpage' %}" class="btn btn-primary">Add Review</a>
+        {% endif %}
     </div>
       <section class="cta" id="contact">
         <div class="container">
           <div class="cta-content">
             <p class="section-subtitle">Call To Action</p>
-            <h2 class="h2 section-title">Ready For Unforgatable Travel.</h2>
-            <p class="section-text">
-              Ready for unforgettable travel memories? Don't forget about us! Get in touch today to know more about our website and discover travel partners for your next adventure.
-            </p>
+            <h2 class="h2 section-title">Emergency Numbers</h2>
+            <div class="emergency-container">
+              <p class="section-text">Hospital Number: 123-456-789</p>
+              <p class="section-text">Police Station Number: 987-654-321</p>
+              <p class="section-text">Helpline: 911</p>
+          </div>
           </div>
           <button class="btn btn-secondary">Contact Us !</button>
         </div>

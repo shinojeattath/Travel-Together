@@ -1,0 +1,47 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="{% static 'login/css/styles.css' %}">
+    <title>Add Reminder</title>
+</head>
+<body>
+    <div class="review">
+        <form action="#" class="review-form" method="post">
+            {% csrf_token %}
+            <h1 class="review__title">Add Reminder</h1>
+            <style>
+                .review__section {
+                    margin-bottom: 20px; /* Add space between sections */
+                }
+            </style>
+
+            <div class="review__section">
+                <h3 class="review__section-title">Reminder Name</h3>
+                <div class="review__box">
+                    <input type="text" name="reminder_name" placeholder="Enter Reminder Name" required class="review__input">
+                </div>
+            </div>
+
+            <div class="review__section">
+                <h3 class="review__section-title">Reminder Description</h3>
+                <div class="review__box">
+                    <textarea name="reminder_description" placeholder="Enter Reminder Description" required class="review__input"></textarea>
+                </div>
+            </div>
+
+            <div class="review__section">
+                <h3 class="review__section-title">Due Date</h3>
+                <div class="review__box">
+                    <input type="date" name="due_date" required class="review__input">
+                </div>
+            </div>
+
+            <button type="submit" class="review__button">Add Reminder</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -109,6 +109,7 @@ def cancelFunc(request):
     return redirect('profile')
 
 def reviewpage(request):
+
     username = request.session.get('username')
     photo = profile_photo.objects.all()
     if request.method == 'POST':
@@ -120,3 +121,11 @@ def reviewpage(request):
         return redirect('homepage')
     
     return render(request, 'reviewpage.html', {'username':username, 'photo':photo})
+
+   
+
+def remainder(request):
+    return render(request, 'remainder.html')
+
+def newremainder(request):
+    return render(request, 'newrem.html')
