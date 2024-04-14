@@ -215,8 +215,6 @@ img {
   margin-bottom: 5px;
 }
 
-
-/* CSS styles */
 .profile-section {
   text-align: center;
   margin-bottom: 20px;
@@ -228,7 +226,7 @@ img {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto; /* Align the photo to the center horizontally */
+  margin: 0 auto;
   margin-bottom: 10px;
   align-self: center;
 }
@@ -287,7 +285,6 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for user details */
 .user-details {
   display: flex;
   align-items: center;
@@ -317,7 +314,7 @@ body {
 
 .place-visited p {
   font-size: 16px;
-  color: #666; /* Dark gray text color */
+  color: #666;
 }
 
 
@@ -356,7 +353,6 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Style for icons */
 .ri-pencil-fill {
   position: absolute;
   right: 10px;
@@ -364,7 +360,6 @@ body {
   color: #ccc; 
 }
 
-/* Style for submit button */
 .review__button {
   display: block;
   width: 100%;
@@ -386,11 +381,70 @@ body {
   .login {
     justify-content: center;
   }
+
   .login__form {
     width: 420px;
     padding-inline: 2.5rem;
   }
+
   .login__title {
     margin-bottom: 2rem;
   }
+
+  .login__box {
+    grid-template-columns: 1fr auto;
+    column-gap: 0.75rem;
+  }
+
+  .login__button {
+    width: auto;
+  }
+
+  .review {
+    margin: 50px auto;
+  }
+
+  .review__inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .review__input {
+    width: calc(50% - 5px);
+  }
+
+  .review__button {
+    width: 100%;
+  }
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.login__table input[type="text"],
+.login__table input[type="date"] {
+  width: 100%;
+}
+
+.review {
+  width: 80%;
+  max-width: 800px;
+}
+
+.user-details {
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+}
 }
