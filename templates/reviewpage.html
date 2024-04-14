@@ -14,22 +14,23 @@
         
     
         <div class="user-details">
-            <img src="{% static 'login/img/lotus.jpg' %}" alt="Profile Picture" class="profile-pic">
-            <span class="username">John Doe</span>
+            <img src="{{i.url}}" alt="Profile Picture" class="profile-pic">
+            <span class="username">{{username}}</span>
         </div>
 
         <div class="place-visited">
-            <h2>Place Visited: </h2>
-            <p>Paris, France</p>
+            <h2>Place Visited: Delhi </h2>
+            
         </div>
 
         <form action="#" class="review-form" method="post">
             {% csrf_token %}
             <h1 class="review__title">Submit Review</h1>
-
+            <input type="hidden" name="place" value="delhi">
+            <input type="hidden" name="name" value="{{username}}">
             <div class="review__inputs">
                 <div class="review__box">
-                    <textarea placeholder="Write your review here..." name="review" required class="review__input"></textarea>
+                    <textarea placeholder="Write your review here..." name="written_review" required class="review__input"></textarea>
                     <i class="ri-pencil-fill"></i>
                 </div>
             </div>
