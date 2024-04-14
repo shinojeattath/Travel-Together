@@ -20,6 +20,7 @@ def user_login(request):
         else:
             messages.error(request, "Invalid Employee ID or Password")
             return redirect(user_login)
+        
     return render(request, 'login.html')
 
 def signup(request):
@@ -30,18 +31,19 @@ def signup(request):
         password = request.POST['password']
         image = request.FILES['image']
       
-        
         user = User.objects.create_user(name ,email, password)
         user.save()
         image = profile_photo(name=name, photo=image)
         image.save()
 
         return redirect('user_login')  
+    
     return render(request, 'signup.html')
 
 def homepage(request):
     image = profile_photo.objects.all()
     reviews = review.objects.filter(place = 'idukki')
+
     return render(request, 'home.html',{"image":image, 'reviews':reviews})
 
 def jammu(request):
@@ -97,6 +99,7 @@ def profile(request):
         image = profile_photo.objects.get(name=username)
     except profile_photo.DoesNotExist:
         image = None
+
     return render(request, 'profile.html', {'booked':booked, 'username':username, 'image':image})
 
 def cancelFunc(request):
@@ -106,7 +109,20 @@ def cancelFunc(request):
     return redirect('profile')
 
 def reviewpage(request):
-    return render(request, 'reviewpage.html')
+
+    username = request.session.get('username')
+    photo = profile_photo.objects.all()
+    if request.method == 'POST':
+        name = request.POST['name']
+        place = request.POST['place']
+        written_review = request.POST['written_review']
+        reviews = review(name=name, place=place, review=written_review)
+        reviews.save()
+        return redirect('homepage')
+    
+    return render(request, 'reviewpage.html', {'username':username, 'photo':photo})
+
+   
 
 def remainder(request):
     return render(request, 'remainder.html')
