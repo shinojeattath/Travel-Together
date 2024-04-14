@@ -107,3 +107,6 @@ def cancelFunc(request):
 
 def reviewpage(request):
     return render(request, 'reviewpage.html')
+
+def remainder(request):
+    return render(request, 'remainder.html')
