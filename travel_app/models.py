@@ -32,3 +32,9 @@ class sub_places(models.Model):
 class profile_photo(models.Model):
     name = models.CharField(max_length=30)
     photo = models.ImageField(upload_to='profile_photo/')
+
+class remainder(models.Model):
+    username = models.CharField(max_length = 50)
+    name = models.CharField(max_length=30)
+    date = models.DateField(null=True)
+    note = models.CharField(max_length=100, null=True)

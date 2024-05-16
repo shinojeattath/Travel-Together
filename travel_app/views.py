@@ -56,10 +56,12 @@ def jammu(request):
     return render(request, 'jammu.html',{'travellers':travellers,'places':places, 'image':image, 'reviews':reviews})
 
 def booking(request):
+    username = request.session.get('username')
+    print(username)
 
-    
     if request.method =='POST':
-        
+        username = request.session.get('username')
+        print(username)
         Travelling_user = travelling_user(
             name=request.POST['name'],
             place=request.POST['place_of_visit'],
@@ -72,7 +74,7 @@ def booking(request):
         Travelling_user.save()
         return redirect(profile)
         
-    return render(request, 'book.html')
+    return render(request, 'book.html', {'user':username})
 
 def idukki(request):
     username = request.session.get('username')
@@ -122,10 +124,21 @@ def reviewpage(request):
     
     return render(request, 'reviewpage.html', {'username':username, 'photo':photo})
 
-   
+def remainders(request):
 
-def remainder(request):
-    return render(request, 'remainder.html')
+    username = request.session.get('username')
+    new_remainders = remainder.objects.filter(username = username)
+    return render(request, 'remainder.html',{'remainders':new_remainders})
 
 def newremainder(request):
+
+    username = request.session.get('username')
+    if request.method == 'POST':
+        name = request.POST['name']
+        date = request.POST['date']
+        note = request.POST['note']
+        new_remainder = remainder(username=username, name=name, date=date, note=note)
+        new_remainder.save()
+        return redirect('profile')
+
     return render(request, 'newrem.html')

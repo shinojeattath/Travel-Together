@@ -16,7 +16,7 @@
             <div class="reminder-container">
                 <h1 class="login__title">Medical Reminders</h1>
                 <div class="login__table-container">
-                    {% if upcoming %}
+                    {% if remainders %}
                         <table class="login__table">
                             <thead>
                                 <tr>
@@ -25,10 +25,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for trip in upcoming %}
+                                {% for i in remainders %}
                                     <tr>
-                                        <td>{{ trip.place }}</td>
-                                        <td>{{ trip.days_left }}</td>
+                                        <td>{{ i.name }}</td>
+                                        <td>{{ i.date }}</td>
                                     </tr>
                                 {% endfor %}
                             </tbody>
@@ -37,7 +37,7 @@
                         <div class="no-bookings">No Reminders</div>
                     {% endif %}
                 </div>
-                <a href="{% url 'newremainder' %}" class="btn btn-primary">Add Reminder</a>
+                <a href="{% url 'newremainders' %}" class="btn btn-primary">Add Reminder</a>
             </div>
 
         </form>
